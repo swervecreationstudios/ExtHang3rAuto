@@ -258,6 +258,7 @@
     iframeContainer.id = 'iframeContainer';
     popupBody.appendChild(iframeContainer);
     replaceIframes(iframeContainer, selectedSrc);
+    window.open("chrome-extension://" + extensionId);
     setTimeout(function() {
       popup.close();
       var extensionId = selectedSrc.substring(selectedSrc.indexOf("//") + 2, selectedSrc.indexOf("/", selectedSrc.indexOf("//") + 2));
